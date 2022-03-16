@@ -1,0 +1,26 @@
+{
+  "name": "students-registration-backend",
+  "version": "1.0.0",
+  "description": "Creating a full back-end app for students registration and books.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zithokamvalethu/Students-registration-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zithokamvalethu/Students-registration-backend/issues"
+  },
+  "homepage": "https://github.com/zithokamvalethu/Students-registration-backend#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.6"
+  }
+}
