@@ -1,5 +1,3 @@
-import res from "express/lib/response";
-
 const studentService = require("../services/student.js");
 
 export const signUp = async (req, res, next) => {
