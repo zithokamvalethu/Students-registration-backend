@@ -1,11 +1,15 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const { books } = require("./routes/books");
+const { student } = require("./routes/auth");
+app.use(cors());
+mongoose
+  .connect(process.env.DATABASE_SERVER)
+  .then((res) => console.log("I am connected to MongoDB"));
 
-const port = 3000 | process.env;
-
-app.use(express.json());
-app.use("/", authRouter);
-mongoose.connect({});
-app.get("/", (req, res) => res.send("Hello World!"));
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+student(app);
+books(app);
+app.listen(process.env.PORT, () => {
+  console.log("Server started on port" + process.env.PORT);
+});
