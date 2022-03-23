@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const studentSchema = require("../model/studentSchema.js");
+const studentSchema = require("../model/Students/index");
 const signedToken = require("../jsonWebtoken/signedToken");
 
 async function createStudentUser(payload) {
@@ -41,7 +41,7 @@ function signedInStudent(payload) {
             }
           })
           .catch((err) => {
-            throw new Error("ALl fields are required");
+            throw new Error("All fields are required");
           });
       }
     });
